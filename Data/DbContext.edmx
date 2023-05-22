@@ -10,6 +10,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Author" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="PublishingHouse" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="ReleaseYear" Type="int" Nullable="false" />
@@ -107,6 +108,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Author" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PublishingHouse" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ReleaseYear" Type="Int32" Nullable="false" />
@@ -210,6 +212,7 @@
             <EntityTypeMapping TypeName="LibraryDBModel.Book">
               <MappingFragment StoreEntitySet="Book">
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
                 <ScalarProperty Name="PublishingHouse" ColumnName="PublishingHouse" />
                 <ScalarProperty Name="ReleaseYear" ColumnName="ReleaseYear" />

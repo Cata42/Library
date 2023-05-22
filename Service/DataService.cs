@@ -91,6 +91,24 @@ namespace Library.Service
 
         public void AddBook(Book book)
         {
+            if (string.IsNullOrWhiteSpace(book.Title))
+                throw new Exception("Title cannot be null or empty.");
+
+            if (string.IsNullOrWhiteSpace(book.Author))
+                throw new Exception("Author cannot be null or empty.");
+
+            if (string.IsNullOrWhiteSpace(book.PublishingHouse))
+                throw new Exception("PublishingHouse cannot be null or empty.");
+
+            if (book.ReleaseYear == 0)
+                throw new Exception("ReleaseYear cannot be null.");
+
+            if (book.Price == 0)
+                throw new Exception("Price cannot be null.");
+
+            if (book.Genre == 0)
+                throw new Exception("Genre cannot be null.");
+
             db.Books.Add(book);
             db.SaveChanges();
         }
@@ -100,6 +118,7 @@ namespace Library.Service
             var existingBook = db.Books.Find(book.Id);
             if (existingBook != null)
             {
+                existingBook.Title = book.Title;
                 existingBook.Author = book.Author;
                 existingBook.PublishingHouse = book.PublishingHouse;
                 existingBook.ReleaseYear = book.ReleaseYear;
