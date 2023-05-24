@@ -78,4 +78,58 @@ CREATE TABLE Rent (
 	ReturnDate DATE
 );
 
+GO
+
 -- /TABLES
+
+-- TASKS
+
+CREATE VIEW ReaderRentBookGenre AS
+SELECT b.Title AS Book,
+	   b.Author,
+	   b.Price,
+	   b.PublishingHouse,
+	   b.ReleaseYear,
+	   g.Name AS Genre,
+	   rd.Name AS Reader,
+	   rd.PhoneNumber,
+	   rd.Address,
+	   rt.RentDate,
+	   rt.ExpectedReturnDate,
+	   rt.ReturnDate
+FROM Reader rd
+INNER JOIN Rent rt ON rd.Id = rt.Reader
+INNER JOIN Book b ON rt.Book = b.Id
+INNER JOIN Genre g ON b.Genre = g.Id
+
+GO
+
+CREATE VIEW RentBookGenre AS
+SELECT b.Title AS Book,
+	   b.Author,
+	   b.Price,
+	   b.PublishingHouse,
+	   b.ReleaseYear,
+	   g.Name AS Genre,
+	   rt.RentDate,
+	   rt.ExpectedReturnDate,
+	   rt.ReturnDate
+FROM Rent rt
+INNER JOIN Book b ON rt.Book = b.Id
+INNER JOIN Genre g ON b.Genre = g.Id
+
+GO
+
+CREATE VIEW BookGenre AS
+SELECT b.Title AS Book,
+	   b.Author,
+	   b.Price,
+	   b.PublishingHouse,
+	   b.ReleaseYear,
+	   g.Name AS Genre
+FROM Book b
+INNER JOIN Genre g ON b.Genre = g.Id
+
+GO
+
+-- /TASKS

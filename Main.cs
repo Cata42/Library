@@ -15,12 +15,14 @@ namespace Library
         Books books;
         Readers readers;
         Rents rents;
+        Tasks tasks;
         public Main()
         {
             InitializeComponent();
             books = new Books();
             readers = new Readers();
             rents = new Rents();
+            tasks = new Tasks();
         }
 
         private void booksBtn_Click(object sender, EventArgs e)
@@ -41,6 +43,13 @@ namespace Library
         {
             this.Hide();
             rents.ShowDialog();
+            this.Show();
+        }
+
+        private void tasksBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            tasks.ShowDialog();
             this.Show();
         }
     }

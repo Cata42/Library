@@ -225,6 +225,18 @@ namespace Library.Service
 
         public void AddRent(Rent rent)
         {
+            if (rent.Book == 0)
+            {
+                throw new Exception("Book cannot be null or empty.");
+            }
+            if (rent.Reader == 0)
+            {
+                throw new Exception("Reader cannot be null or empty.");
+            }
+            if (rent.RentDate.Equals("1/1/0001 12:00:00 AM"))
+            {
+                throw new Exception("Rent date cannot be nul or empty.");
+            }
             db.Rents.Add(rent);
             db.SaveChanges();
         }
@@ -234,6 +246,18 @@ namespace Library.Service
             var existingRent = db.Rents.Find(rent.Id);
             if (existingRent != null)
             {
+                if (rent.Book == 0)
+                {
+                    throw new Exception("Book cannot be null or empty.");
+                }
+                if (rent.Reader == 0)
+                {
+                    throw new Exception("Reader cannot be null or empty.");
+                }
+                if (rent.RentDate.Equals("1/1/0001 12:00:00 AM"))
+                {
+                    throw new Exception("Rent date cannot be nul or empty.");
+                }
                 existingRent.Book = rent.Book;
                 existingRent.Reader = rent.Reader;
                 existingRent.RentDate = rent.RentDate;

@@ -33,6 +33,7 @@
             this.readersBtn = new System.Windows.Forms.Button();
             this.rentBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tasksBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,11 +88,25 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // tasksBtn
+            // 
+            this.tasksBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tasksBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tasksBtn.Image = ((System.Drawing.Image)(resources.GetObject("tasksBtn.Image")));
+            this.tasksBtn.Location = new System.Drawing.Point(537, 163);
+            this.tasksBtn.Name = "tasksBtn";
+            this.tasksBtn.Size = new System.Drawing.Size(184, 43);
+            this.tasksBtn.TabIndex = 4;
+            this.tasksBtn.Text = "Tasks";
+            this.tasksBtn.UseVisualStyleBackColor = true;
+            this.tasksBtn.Click += new System.EventHandler(this.tasksBtn_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tasksBtn);
             this.Controls.Add(this.readersBtn);
             this.Controls.Add(this.rentBtn);
             this.Controls.Add(this.booksBtn);
@@ -110,6 +125,7 @@
         private System.Windows.Forms.Button readersBtn;
         private System.Windows.Forms.Button rentBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button tasksBtn;
     }
 }
 
