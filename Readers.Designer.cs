@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Readers));
             this.readersDataGridView = new System.Windows.Forms.DataGridView();
             this.addBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
@@ -37,7 +38,9 @@
             this.addressTB = new System.Windows.Forms.TextBox();
             this.phoneNumberLabel = new System.Windows.Forms.Label();
             this.phoneNumberTB = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.readersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // readersDataGridView
@@ -124,24 +127,35 @@
             this.phoneNumberTB.TextChanged += new System.EventHandler(this.phoneNumberTB_TextChanged);
             this.phoneNumberTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTB_KeyPress);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-10, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(327, 443);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // Readers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.phoneNumberLabel);
-            this.Controls.Add(this.phoneNumberTB);
-            this.Controls.Add(this.addressLabel);
-            this.Controls.Add(this.addressTB);
-            this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.nameTB);
-            this.Controls.Add(this.addBtn);
-            this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.readersDataGridView);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.phoneNumberLabel);
+            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.phoneNumberTB);
+            this.Controls.Add(this.addressTB);
+            this.Controls.Add(this.nameTB);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.updateBtn);
             this.Name = "Readers";
             this.Text = "Readers";
             this.Load += new System.EventHandler(this.Readers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.readersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +172,6 @@
         private System.Windows.Forms.TextBox addressTB;
         private System.Windows.Forms.Label phoneNumberLabel;
         private System.Windows.Forms.TextBox phoneNumberTB;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

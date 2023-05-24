@@ -42,9 +42,9 @@
             this.booksBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.booksBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.booksBtn.Image = ((System.Drawing.Image)(resources.GetObject("booksBtn.Image")));
-            this.booksBtn.Location = new System.Drawing.Point(157, 198);
+            this.booksBtn.Location = new System.Drawing.Point(289, 97);
             this.booksBtn.Name = "booksBtn";
-            this.booksBtn.Size = new System.Drawing.Size(162, 43);
+            this.booksBtn.Size = new System.Drawing.Size(184, 43);
             this.booksBtn.TabIndex = 0;
             this.booksBtn.Text = "Books";
             this.booksBtn.UseVisualStyleBackColor = false;
@@ -55,9 +55,9 @@
             this.readersBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.readersBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.readersBtn.Image = ((System.Drawing.Image)(resources.GetObject("readersBtn.Image")));
-            this.readersBtn.Location = new System.Drawing.Point(515, 198);
+            this.readersBtn.Location = new System.Drawing.Point(289, 341);
             this.readersBtn.Name = "readersBtn";
-            this.readersBtn.Size = new System.Drawing.Size(162, 43);
+            this.readersBtn.Size = new System.Drawing.Size(184, 43);
             this.readersBtn.TabIndex = 1;
             this.readersBtn.Text = "Readers";
             this.readersBtn.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             this.rentBtn.BackColor = System.Drawing.Color.SlateGray;
             this.rentBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rentBtn.Image = ((System.Drawing.Image)(resources.GetObject("rentBtn.Image")));
-            this.rentBtn.Location = new System.Drawing.Point(325, 144);
+            this.rentBtn.Location = new System.Drawing.Point(289, 216);
             this.rentBtn.Name = "rentBtn";
-            this.rentBtn.Size = new System.Drawing.Size(184, 59);
+            this.rentBtn.Size = new System.Drawing.Size(184, 43);
             this.rentBtn.TabIndex = 2;
             this.rentBtn.Text = "Rent";
             this.rentBtn.UseVisualStyleBackColor = false;
