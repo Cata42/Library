@@ -125,6 +125,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Readers.resx">
+      <DependentUpon>Readers.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Data\DbContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DbContext.Designer.cs</LastGenOutput>

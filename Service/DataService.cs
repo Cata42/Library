@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Library.Service
 {
@@ -118,6 +119,24 @@ namespace Library.Service
             var existingBook = db.Books.Find(book.Id);
             if (existingBook != null)
             {
+                if (string.IsNullOrWhiteSpace(book.Title))
+                    throw new Exception("Title cannot be null or empty.");
+
+                if (string.IsNullOrWhiteSpace(book.Author))
+                    throw new Exception("Author cannot be null or empty.");
+
+                if (string.IsNullOrWhiteSpace(book.PublishingHouse))
+                    throw new Exception("PublishingHouse cannot be null or empty.");
+
+                if (book.ReleaseYear == 0)
+                    throw new Exception("ReleaseYear cannot be null.");
+
+                if (book.Price == 0)
+                    throw new Exception("Price cannot be null.");
+
+                if (book.Genre == 0)
+                    throw new Exception("Genre cannot be null.");
+
                 existingBook.Title = book.Title;
                 existingBook.Author = book.Author;
                 existingBook.PublishingHouse = book.PublishingHouse;
@@ -147,6 +166,18 @@ namespace Library.Service
 
         public void AddReader(Reader reader)
         {
+            if (string.IsNullOrWhiteSpace(reader.Name))
+                throw new Exception("Name cannot be null or empty.");
+
+            if (string.IsNullOrWhiteSpace(reader.Address))
+                throw new Exception("Author cannot be null or empty.");
+
+            if (string.IsNullOrWhiteSpace(reader.PhoneNumber))
+                throw new Exception("Phone number cannot be null or empty.");
+
+            if (reader.PhoneNumber.Length != 9)
+                throw new Exception("Phone number must have 9 digits.");
+
             db.Readers.Add(reader);
             db.SaveChanges();
         }
@@ -156,6 +187,18 @@ namespace Library.Service
             var existingReader = db.Readers.Find(reader.Id);
             if (existingReader != null)
             {
+                if (string.IsNullOrWhiteSpace(reader.Name))
+                    throw new Exception("Name cannot be null or empty.");
+
+                if (string.IsNullOrWhiteSpace(reader.Address))
+                    throw new Exception("Author cannot be null or empty.");
+
+                if (string.IsNullOrWhiteSpace(reader.PhoneNumber))
+                    throw new Exception("Phone number cannot be null or empty.");
+
+                if (reader.PhoneNumber.Length != 9)
+                    throw new Exception("Phone number must have 9 digits.");
+
                 existingReader.Name = reader.Name;
                 existingReader.Address = reader.Address;
                 existingReader.PhoneNumber = reader.PhoneNumber;
