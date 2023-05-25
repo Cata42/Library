@@ -133,3 +133,10 @@ INNER JOIN Genre g ON b.Genre = g.Id
 GO
 
 -- /TASKS
+
+CREATE LOGIN gigel
+	WITH PASSWORD = 'gigel';
+
+GO
+
+CREATE USER gigel FOR LOGIN gigel;

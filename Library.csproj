@@ -106,6 +106,12 @@
     <Compile Include="Data\Rent.cs">
       <DependentUpon>DbContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +133,6 @@
       <DependentUpon>Rents.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\DataService.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Tasks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +146,9 @@
     </Compile>
     <EmbeddedResource Include="Books.resx">
       <DependentUpon>Books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -209,19 +217,6 @@
       <LastGenOutput>DbContext.cs</LastGenOutput>
     </Content>
     <Content Include="Query\database.sql" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\return.png" />
     <None Include="Resources\update.png" />
     <None Include="Resources\delete.png" />
